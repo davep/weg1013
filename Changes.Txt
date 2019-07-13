@@ -1,0 +1,173 @@
+Changes since 1.0.12
+====================
+
+o WEG now accepts files dragged from explorer and dropped onto the main
+  window. This is used as another method of opening a guide.
+o WEG now accepts files dragged from explorer and dropped onto the guide
+  manager. This is used as another method of adding guides to the guide
+  manager.
+
+Changes since 1.0.11
+====================
+
+o The preferences dialog had the wrong application name in its title. Oops!
+o Removed the memory usage panel from the stats bar, WEG is now past initial
+  development.
+o The status bar now displays the full "menu path" of the entry you are
+  viewing.
+o WEG will now (as an option) display the guide title and "path" in the title
+  bar of the window.
+o The keyboard handler for the guide entry frame would attempt to set focus
+  to the "menu" tree when escape was pressed at the "top level" no matter if
+  the menu was visible or not. Fixed.
+
+Changes since 1.0.10
+====================
+
+o There is now an option to allow single click jumping (kind of like using a
+  link in a web browser). Note that this does muck up marking using the mouse
+  (if using the single click option) and keyboard navigation, I'll see if there
+  is a way round this at some point in the future.
+o Added a "foretracking" system. This allows you to backtrack from a
+  backtrack.
+o The URL scanner will now detect a few extra URL types.
+o When opening a guide the first menu entry is now selected by default.
+o The expand/collapse status of the guide menu is now "sticky" for each
+  viewing session.
+  
+Changes since 1.0.9
+===================
+
+o Slight change to the search code in egFinder that should give a slight
+  speed increase (Thanks to Viktor Trunov for this suggestion).
+o The global finder now uses AnsiUpperCase() instead of UpperCase() when doing
+  a case insensitive search (Thanks to Viktor Trunov for this suggestion).
+o Double clicking in the menu tree will cause WEG to re-load the guide entry
+  pointed to by the currently selected menu option.
+o Added scrollbars to the credits box in the about dialog as per the suggestion
+  from Viktor Trunov.
+o Added a backtracking system.
+o Fixed a small bug that resulted in the navigation menu options and navigation
+  speed buttons not getting correctly updated all the time.
+o Global OEM->ANSI conversion is now an option which can be set from the
+  preferences dialog.
+o Another small speed increase in the global finder. I was updating the
+  progress bar way too often.
+o Menu titles and prompts are now trimmed of leading and trailing spaces.
+o You can now copy the text to the clipboad with Ctrl-Ins.
+o You can now copy the source to the clipboard with Shift-Ins.
+o Added a bookmarking system.
+o Extra DOS-a-like keyboard handling in the main viewer form.
+o As well as remembering which guide you were reading WEG now remebers which
+  entry you were looking at and which line was focused.
+o As a visual aid to show which lines are "links" in the entry viewer the
+  mouse cursor will turn to a hand. I'm not sure if I like this yet.
+
+Changes since 1.0.8
+===================
+
+o You can now "browse" for the default guide directory in the prefs dialog.
+o Very small speed-up of the owner draw code for the entry listbox.
+o "Selected" entry lines now have a slightly different colour from the
+  "focused" entry line.
+o Started to take into account Oem/Ansi differences.
+o Minor improvement to the URL scanning code.
+o The "Re-Open" menu option now shows guide titles instead of file names.
+o Some fixed pitch fonts don't print as fixed pitch fonts, added a workaround
+  for this.
+o Finally got round to working out what the "unknown long" was in the guide
+  entries. It is two words, first is the menu the entry hangs off and second
+  is the prompt of the menu it hangs off. Added these instance variables to
+  TNGEntry.
+o The menu tree now correctly "tracks" the entry you are viewing. This is
+  of most use when jumping around using the global finder or see also
+  entries.
+  
+Changes since 1.0.7
+===================
+
+o Experimental feature - URL Scanner.
+o Added a toolbar button for the URL scanner.
+o Small changes to the layout of the global finder.
+o The global finder can now search all known Norton Guides.
+o Added thread priority control to the global finder.
+o Got round to drawing the "small" icon.
+ 
+Changes since 1.0.6
+===================
+
+o Some cosmetic changes to the toolbar.
+o The menu tree now has a "sticky" highlight.
+o The guide list in the guide manager now has a "sticky" highlight.
+o Search text in the guide wide finder how has a history.
+o The guide wide finder now has a location and content memory.
+o Incorperated fix from K.E. McFeely that stops you from adding duplicate
+  entries to the guide manager.
+o Improved the error reporting when adding guides to the guide manager.
+o Make Expand/Collapse tree branches avaialble from the View menu.
+o The credits box in the About dialog now uses the font you've selected for
+  viewing the guide entries.
+o The version number in the about box is now taken from the file's version
+  number resource.
+
+Changes since 1.0.5
+===================
+
+o Added the view menu and the "Show/Hide guide menu" option.
+o Added the Guide Manager.
+o Added a toolbar button for the guide manager.
+o The contact email address in the about box is now a clickable link.
+o The entry viewing list box (right hand panel) is now a multi-select
+  list box, this will allow various operations to work on the selected
+  lines.
+o Clipboard text copy is now range aware.
+o Clipboard source copy is now range aware.
+o Text save is now range aware.
+o Source save is now range aware.
+o Print is now range aware (I think, I've run out of paper <g>).
+o I wasn't un-RLEing the spaces in the menu items. Fixed.
+o Using the see-also drop down list box with the keyboard now works fine.
+o The progress bar in the guide wide finder window now clears when the search
+  is stopped or is complete (seems to make more sense).
+o Added a right click menu to the entry viewing pane.    
+
+Changes since 1.0.4
+===================
+
+o Changed some of the toolbar button images.
+o Added a toolbar button for the guide wide search.
+o Changed the global search so that when you do a short-only/long-only
+  search it only loads those entry types and totally skips the others. This
+  can make such searches a *lot* faster.
+o Fixed the "multiple entry paint on load" problem.
+o Added some more Dos/Linux EG keystroke compatibility to the entry viewer.
+o Re-wrote ngReadStrZ() so that it is much faster.
+o Re-wrote TNGEntry.stripControls() so that it is a bit faster.
+o When jumping to an entry from the global guide search, if the main window
+  is viewing the entry that contains the "hit" the listbox cursor is simply
+  moved, previously it re-loaded the entry first. This can make jumping to a
+  hit much quicker.  
+
+Changes since 1.0.3
+===================
+
+o Re-wrote all file I/O to use TFileStream.
+o Guides are now opened in shared mode.
+o Fixed a bug in the owner draw code that used Hex2Char() to get the value
+  of a hex colour attribute. Hex2Char() would convert a NUL to a SPACE
+  (for obvious reasons) but this obviously mucked up the colour of 0.
+  Re-named Hex2Char() as Hex2Int() (without the NUL check) and wrote
+  Hex2Char() as a wrapper for Hex2Int() (with the checking).
+o The entry panel will now accept most of the keystrokes you'd know and love
+  from Norton Guide, Expert Help and other flavours of Expert Guide.
+o Added the threaded guide wide searcher.
+
+Changes Since 1.0.2
+===================
+
+o Window size/location is no longer saved if the window is maximized.
+o Correct use of the hour glass cursor.
+o Bold colours were being painted for the reverse attribute, fixed.
+o The DOS colour map is now user configurable.
+o Added MessageBeep()s where required.
+o Minor font fiddling.

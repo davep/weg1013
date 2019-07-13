@@ -1,0 +1,102 @@
+[Compiler]
+A=1
+B=0
+C=1
+D=1
+E=0
+F=0
+G=1
+H=1
+I=0
+J=1
+K=0
+L=1
+M=0
+N=1
+O=1
+P=1
+Q=0
+R=0
+S=0
+T=0
+U=0
+V=1
+W=0
+X=1
+Y=0
+Z=1
+ShowHints=1
+ShowWarnings=1
+UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[Linker]
+MapFile=3
+OutputObjs=0
+ConsoleApp=1
+DebugInfo=0
+MinStackSize=16384
+MaxStackSize=1048576
+ImageBase=4194304
+ExeDescription=
+
+[Directories]
+OutputDir=
+UnitOutputDir=
+SearchPath=
+Packages=VCLX30;VCL30
+Conditionals=
+DebugSourceDirs=
+UsePackages=0
+
+[Parameters]
+RunParams=
+HostApplication=
+
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=13
+Build=40
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2057
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Hagbard's World
+FileDescription=Executable
+FileVersion=1.0.13.40
+InternalName=weg
+LegalCopyright=Copyright © 1998,1999 Dave Pearson
+LegalTrademarks=
+OriginalFilename=weg.exe
+ProductName=Expert Guide For Windows
+ProductVersion=1.0.13
+Comments=Yet Another Norton Guide Reader
+
+[Excluded Packages]
+C:\usr\lib\bal3rdparty\Bal3rdParty.dpl=B. A. L. Third Party Components
+c:\home\davep\develop\r-and-d\sexp.dpl=s-expression library
+C:\usr\lib\libt2t\libt2t.dpl=Top2Toe Oriented Components
+C:\Program Files\Woll2Woll\IP4D3\package\ip40d_d3.dpl=InfoPower 4 for Delphi 3
+C:\ADS\TDataSet\Delphi3\advantag.dpl=Advantage TDataSet Descendant Components
+C:\ads\INFOPOWER\Advantage_IP.dpl=Advantage TDataset Descendant for InfoPower
+C:\usr\lib\rbp\LIB\dclRBP43.dpl=ReportBuilder Pro Components
+C:\usr\lib\rbp\LIB\dclRBC31.dpl=ReportBuilder TeeChart Components
+C:\usr\lib\rbp\LIB\dclDAD43.dpl=ReportBuilder Data Access Environment
+C:\usr\lib\rbp\LIB\dclRBU43.dpl=ReportBuilder Sample Components
+C:\Program Files\Borland\Delphi 3\Bin\dcldb30.dpl=Delphi Database Components
+C:\Program Files\Borland\Delphi 3\Bin\dcl31w30.dpl=Delphi 1.0 Compatibility Components
+C:\Program Files\Borland\Delphi 3\Bin\dclisp30.dpl=Delphi Internet Solutions Pack Components
+C:\Program Files\Borland\Delphi 3\Bin\dclsmp30.dpl=Delphi Sample Components
+C:\Program Files\Borland\Delphi 3\Bin\DCLOCX30.dpl=Delphi Sample Imported ActiveX Controls
+C:\Program Files\Borland\Delphi 3\Bin\dclqrt30.dpl=Delphi QuickReport Components
+C:\Program Files\Borland\Delphi 3\Bin\DCLTEE30.dpl=Delphi TeeChart Components
+C:\WINDOWS\SYSTEM\IBEVNT30.dpl=Delphi Interbase Event Alerter Component
+C:\ADS\BDEALT32\Delphi3\ads4dph.dpl=Advantage BDE Alternative Components
+C:\usr\lib\ballib\BALLib.dpl=B. A. L. Library - Components, Functions & Procedures
